@@ -7,5 +7,6 @@ urlpatterns = [
     path(r"Jacob/", include("fgv.urls")), path('admin/', admin.site.urls),
     path(r"app_ezequiel/", include("app_ezequiel.urls")),
     path(r"app_wendell/", include("app_wendell.urls")),
+    path(r"appdan/", include("appdan.urls")),
     path('admin/', admin.site.urls)
 ]
