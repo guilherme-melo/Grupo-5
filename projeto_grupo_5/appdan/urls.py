@@ -2,5 +2,6 @@ from django.urls import path
 from appdan import views as views
 
 urlpatterns = [
-    path("", projeto_grupo_5_views.projeto_grupo_5, name="projeto_grupo_5" ),
+    path("", views.index, name="index"),
+    path("index/", views.index, name="index"),
 ]
