@@ -1,8 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def index(request):
-    return HttpResponse("<strong>Ezequiel</strong>")
+def quem_somos(request):
+    return render(request, "app_ezequiel/quem_somos.htm")
 
-def special(request):
-    return render(request, "app_ezequiel/index.htm")
+def fale_conosco(request):
+    return render(request, "app_ezequiel/fale_conosco.htm")
+
+def apoie(request):
+    return render(request, "app_ezequiel/apoie.htm")
