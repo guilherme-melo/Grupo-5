@@ -1,6 +1,9 @@
 from django.http import HttpResponse
 
-# Create your views here.
+from django.shortcuts import render
 
-def index(request):
-    return HttpResponse("<strong>app_wendell</strong>")
+def detalhes(request):
+    return render(request, "app_wendell/detalhes.htm")
+
+def se_juntar(request):
+    return render(request, "app_wendell/se_juntar.htm")

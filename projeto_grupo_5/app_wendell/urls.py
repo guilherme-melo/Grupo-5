@@ -1,8 +1,9 @@
 
 from django.urls import path
-from app_wendell import views as app_wendell_views
+from app_wendell import views as views
 
 urlpatterns = [
-    path("", app_wendell_views.index, name ="index"),
-    path("index/", app_wendell_views.index, name ="index"),
+    path("", views.detalhes, name="detalhes"),
+    path("detalhes/", views.detalhes, name="detalhes"),
+    path("se_juntar/", views.se_juntar, name="se_juntar")
 ]
