@@ -13,13 +13,13 @@ def apoie(request):
     return render(request, "app_ezequiel/apoie.htm")
     
 def equipe(request, pessoa):
-    equipe = ["dandan", "daniel", "guilherme", "bruno", "wendell", "ezequiel"]
+    equipe = ["dandan", "daniel", "guilherme", "breno", "wendell", "ezequiel"]
     if pessoa in equipe:
         return HttpResponse("<strong>Pessoa incrível</strong>")
     else:
         return HttpResponseNotFound("Página não existe!")
 
 def redireciona(request):
-    #url_redirecionamento = reverse("equipe", args=["ezequiel"])
-    #return HttpResponseRedirect(url_redirecionamento)
-    return HttpResponseRedirect("/app_ezequiel/quem_somos")
+    url_redirecionamento = reverse("quem_somos")
+    return HttpResponseRedirect(url_redirecionamento)
+    #return HttpResponseRedirect("/app_ezequiel/quem_somos")
