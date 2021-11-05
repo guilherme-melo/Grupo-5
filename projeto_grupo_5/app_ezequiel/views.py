@@ -15,7 +15,10 @@ def apoie(request):
 def equipe(request, pessoa):
     equipe = ["dandan", "daniel", "guilherme", "breno", "wendell", "ezequiel"]
     if pessoa in equipe:
-        return HttpResponse("<strong>Pessoa incrível</strong>")
+        context ={
+            "nome":pessoa.capitalize()
+        }
+        return render(request, "app_ezequiel/equipe.htm", context)
     else:
         return HttpResponseNotFound("Página não existe!")
 
