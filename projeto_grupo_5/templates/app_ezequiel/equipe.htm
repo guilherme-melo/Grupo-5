@@ -7,14 +7,29 @@
 	
 	<body>
 		<header>
-			<h1>Conheça o {{nome}}</h1>
+			<h1>Conheça o {{nome_familia}}</h1>
 		</header>
 		
 		<article>
 		<main>
 			<p>
-				O {{nome}} é uma pessoa incrível!!!!
+				O {{nome|add:" "|add:nome_familia}} é uma pessoa incrível!!!!
 			</p>
+			<p>
+				Ele está cursando {{curso|upper}}. O curso de {{curso|lower}} é incrível.
+			</p>
+
+			<h1>História</h1>
+
+			{% lorem %}
+
+			<h1>Equipe</h1>
+
+			<ul>
+				{% for pessoa in equipe %}
+					<li>{{pessoa|title}}</li>
+				{% endfor %}
+			</ul>
 		</main>
 		</article>
 		

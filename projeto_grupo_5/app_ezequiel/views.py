@@ -14,9 +14,18 @@ def apoie(request):
     
 def equipe(request, pessoa):
     equipe = ["dandan", "daniel", "guilherme", "breno", "wendell", "ezequiel"]
+    cd = ["guilherme", "breno"]
+    map = ["dandan", "wendell", "ezequiel", "daniel"]
     if pessoa in equipe:
+        if pessoa in cd:
+            curso = "CIÊNCIAS DE DADOS"
+        elif pessoa in map:
+            curso = "MATEMÁTICA APLICADA"
         context ={
-            "nome":pessoa.capitalize()
+            "nome": "amiguinho",
+            "nome_familia": pessoa.capitalize(),
+            "curso": curso,
+            "equipe": equipe
         }
         return render(request, "app_ezequiel/equipe.htm", context)
     else:
