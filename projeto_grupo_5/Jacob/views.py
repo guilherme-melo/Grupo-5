@@ -7,14 +7,14 @@ def primeiro(request):
     return render(request, "Jacob/primeiro.htm")
 
 def equipe(request, pessoa):
-    equipe = ["dandan", "daniel", "guilherme", "breno", "wendell", "ezequiel"]
-    cd = ["guilherme", "breno"]
-    map = ["dandan", "wendell", "ezequiel", "daniel"]
+    equipe = ["burro", "gafanhoto", "gasparzinho", "piriquito", "saci", "Daniel"]
+    cd = ["saci", "Dandan"]
+    map = ["burro", "gafanhoto", "gasparzinho", "piriquito"]
     if pessoa in equipe:
         if pessoa in cd:
-            curso = "CIÊNCIAS DE DADOS"
+            curso = "MEDICINA"
         elif pessoa in map:
-            curso = "MATEMÁTICA APLICADA"
+            curso = "MATEMÁTICA DE DADOS"
         context ={
             "nome": "amiguinho",
             "nome_familia": pessoa.capitalize(),
