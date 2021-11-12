@@ -1,16 +1,16 @@
 {% extends "app_breno/template.htm" %}
 {% load static %}
 
-{% block cabecalho%}
+{% block cabecalho %}
     <title>Tabela de Notas</title>
-{% endblock%}
+{% endblock %}
 
-{% block estilos%}
-    <link rel="stylesheet" type="text/css" href="{% static 'app_ezequiel/estilos.css' %}">
-{% endblock%}
+{% block estilo %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app_breno/estilos.css' %}">
+{% endblock %}
 
-{% block conteudo%}
-    <h2>HTML Table</h2>
+{% block conteudo %}
+    <h2>Tabela de Filmes</h2>
 
     <table>
         <tr>
@@ -19,9 +19,6 @@
             <th>Entendi o filme?</th>
         </tr>
         <tr>
-            <li></li>
-        <li>Under the Silver Lake</li>
-        <li></li>
             <td>The Lighthouse</td>
             <td>9.5</td>
             <td>Não</td>
@@ -37,4 +34,4 @@
             <td>9</td>
         </tr>
     </table>
-{% endblock%}
+{% endblock %}
