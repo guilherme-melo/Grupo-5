@@ -1,10 +1,9 @@
-from django.contrib import admin
-from django.urls import path, include
-from django.urls import include
+from django.urls import path
 from breno import views as views
-from django.urls.conf import include
 
 urlpatterns = [
-    path("", views.index, name="index"),
-    path("index/", views.index, name="index"),
+    path("", views.sobre, name="sobre"),
+    path("sobre/", views.sobre, name="sobre"),
+    path("lista/", views.lista, name="lista"),
+    path("tabela/", views.tabela, name="tabela")
 ]
