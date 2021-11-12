@@ -1,27 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Detalhes do projeto:</title>
-	</head>
-	
-	<body>
-		<header>
-			<h1>nosso projeto funciona assim:</h1>
-		</header>
+{% extends "app_wendell/template.htm" %}
+{% load static %}
+
+{% block cabecalho %}
+	<title>Detalhes do projeto:</title>
+{% endblock %}
+
+{% block estilo %}
+	<link rel="stylesheet" type="text/css" href="{% static 'app_wendell/estilos.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+	<header>
+		<h1>nosso projeto funciona assim:</h1>
+	</header>
 		
-		<article>
+	<article>
 		<main>
 			<p>
-				nosso projeto é incrivel!!!
+				{% lorem %}
+
+				Nosso projeto é incrivel!!!
 			</p>
 		</main>
-		</article>
-		
-		<aside>
-			<a href="#">Voltar ao topo</a>
-		</aside>
-		
-		<footer>Copyright &copy; 2021 by Grupo-5.</footer>
-	</body>
-</html>
+	</article>
+{% endblock %}

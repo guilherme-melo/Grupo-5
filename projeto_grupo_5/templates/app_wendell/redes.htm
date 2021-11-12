@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Mosso {{rede}}</title>
-	</head>
-	
-	<body>
-		<header>
-			<h1>Esse é nosso {{rede}}</h1>
-		</header>
+{% extends "app_wendell/template.htm" %}
+{% load static %}
+
+{% block cabecalho %}
+	<title>Nosso {{rede}}</title>
+{% endblock %}
+
+{% block estilo %}
+	<link rel="stylesheet" type="text/css" href="{% static 'app_wendell/estilos.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+	<header>
+		<h1>Esse é nosso {{rede}}</h1>
+	</header>
 		
-		<article>
+	<article>
 		<main>
 			<p>
-				{{rede}}
+				<a href="https://{{rede}}.com{{link}}">{{rede}}{{link}}</a>
 			</p>
 		</main>
 		</article>
-		
-		<footer>Copyright &copy; 2021 by Grupo-5.</footer>
-	</body>
-</html>
+{% endblock %}

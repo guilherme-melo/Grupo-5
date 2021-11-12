@@ -11,13 +11,15 @@ def se_juntar(request):
 
 def redes_sociais(request, rede):
     redes = ["instagram", "twitter", "github", "facebook"]
+    links = {"instagram":"/grupo5",
+            "twitter":"/grupo5", 
+            "github":"/guilherme-melo/Grupo-5",
+            "facebook":"/grupo5"}
+    print(links[rede])
     if rede in redes:
         context ={
             "rede": rede,
-            "instagram":"/grupo5",
-            "twitter":"/grupo5", 
-            "github":"/guilherme-melo/Grupo-5",
-            "facebook":"grupo5"
+            "link":links[rede]
         }
         return render(request, "app_wendell/redes.htm", context)
     else:
