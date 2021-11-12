@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import Http404, HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
@@ -26,7 +26,7 @@ def coisa(request, fruta):
         }
         return render(request, "appdan/coisa.htm", context)
     else:
-        return HttpResponseNotFound("Página não existe!")
+        raise Http404()
 
 def redireciona(request):
     url_redirecionamento = reverse("quem_somos")
