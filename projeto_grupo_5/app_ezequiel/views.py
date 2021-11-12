@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import Http404,HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
@@ -13,9 +13,9 @@ def apoie(request):
     return render(request, "app_ezequiel/apoie.htm")
     
 def equipe(request, pessoa):
-    equipe = ["dandan", "daniel", "guilherme", "breno", "wendell", "ezequiel"]
-    cd = ["guilherme", "breno"]
-    map = ["dandan", "wendell", "ezequiel", "daniel"]
+    equipe = ["breno", "dandan", "daniel", "ezequiel", "guilherme", "wendell"]
+    cd = ["breno", "guilherme"]
+    map = ["dandan", "daniel", "ezequiel", "wendell"]
     if pessoa in equipe:
         if pessoa in cd:
             curso = "CIÊNCIAS DE DADOS"
@@ -29,7 +29,8 @@ def equipe(request, pessoa):
         }
         return render(request, "app_ezequiel/equipe.htm", context)
     else:
-        return HttpResponseNotFound("Página não existe!")
+        raise Http404()
+        #return HttpResponseNotFound("Página não existe!")
 
 def redireciona(request):
     url_redirecionamento = reverse("quem_somos")

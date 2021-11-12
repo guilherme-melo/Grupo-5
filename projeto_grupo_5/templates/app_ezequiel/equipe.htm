@@ -30,7 +30,7 @@
 
 		<ul>
 			{% for pessoa in equipe %}
-				<li>{{pessoa|title}}</li>
+				<li><a href="{% url "equipe" pessoa %}">{{pessoa|title}}</a></li>
 			{% endfor %}
 		</ul>
 	</main>
